@@ -47,3 +47,29 @@ git commit
 or
 git commit -m "Your message"
 To save a snapshot of the files in the repository
+
+git diff
+With no arguments compares the working directory with the staging area
+Once you do git add, the files in the working dir and the staging area are the
+same.
+
+To check the differences between the files in the staging area and the
+repository do
+
+git diff --staged
+
+To get rid of the changes on the files on the working directory and the staging
+area
+
+git reset --hard
+
+To leave the "detached HEAD state" run
+
+git checkout master
+
+3) How can you use the staging area to make sure you have one commit per
+   logical change?
+
+You can add the files to change one logical step and then commit, and later add
+other files that might have changed to make another thing work in another
+commit.
