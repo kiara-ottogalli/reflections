@@ -1,0 +1,100 @@
+I used FC (File Compare in Windows 8) to check for differences into the files.
+
+1) How did viewing a diff between two versions of a file help me see the bug
+   that was introduced?
+
+The FC command printed out only the parts of the file that had differences
+so it was easy to check what word had a typo.
+
+2) How could having easy access to the entire history of a file make me a more
+   efficient programmer in the long term?
+
+It makes me a more efficient programmer because it helps me check the evolution
+of a file and if there's a mistake in the new version of the file, helps me get
+back to the last working version.
+
+Commands:
+
+git log
+To see the different commits
+
+git diff
+To see the changes between commits using the ids
+
+3) What do you think are the pros and cons of manually choosing when to create
+   a commit, like you do in Git, vs having versions automatically saved, like 
+   Google Docs does?
+
+Pros
+- Each commit represent logical related changes, and it helps you to keep track
+  of the different things developed.
+- You can add a meaninful message to each commit explaining what was intended.
+Cons
+- You have to remember to do a commit.
+
+Repository
+Commits multiple files together.
+
+git log --stat
+Staticstics of what files did change in each commit
+
+4) Why do you think some version control systems, like Git, allow saving
+   multiple files in one commit, while others, like Google Docs, treat each
+   file separately?
+
+In the case of git it helps to find changes in related files. In the case of
+Google Docs it helps to only track changes per file, that is a more general
+use case, not for developers that need to see the related changes between
+files.
+
+Cloning a Repository
+
+git clone
+
+In the version-control folder type:
+
+$ git clone https://github.com/udacity/asteroids.git
+
+git config --global color.ui auto
+
+To see colors
+
+git log mover with up-down arrows and quits with q
+
+5) How can you use the commands git log and git diff to view the history of
+   files?
+
+git log helps me to see the history of commits
+git diff helps me to see what are the actual differences between commits
+
+Git Errors and Warnings Solution
+
+Should not be doing an octopus 
+Octopus is a strategy Git uses to combine many different versions of code
+together. This message can appear if you try to use this strategy in an
+inappropriate situation.
+
+You are in 'detached HEAD' state 
+HEAD is what Git calls the commit you are currently on. You can “detach” the
+HEAD by switching to a previous commit, which we’ll see in the next video.
+Despite what it sounds like, it’s actually not a bad thing to detach the HEAD.
+Git just warns you so that you’ll realize you’re doing it.
+
+Panic! (the 'impossible' happened) 
+This is a real error message, but it’s not output by Git. Instead it’s output
+by GHC, the compiler for a programming language called Haskell. It’s reserved
+for particularly surprising errors!
+
+git checkout b0678b161fcf74467ed3a63110557e3d6229cfa6
+Restore to a previous version
+
+6) How might using version control make you more confident to make changes that
+could break something?
+
+Makes me more confident because if I introduce an error or erase something by
+mistake, I can easily go back to a working state or simply fix the error.
+
+7) Now that you have your workspace set up, what do you want to try using Git
+   for?
+
+I want to use git to save the history of my upcoming programming projects.
