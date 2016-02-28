@@ -1,0 +1,49 @@
+git init
+
+Run this command inside a folder you want to be a repository.
+
+Example
+
+mkdir my_new_rep
+cd my_new_rep
+git init
+
+You can do it in a folder containing files
+
+This will create a .git directory with the information needed to track the
+history of the repository.
+
+When you initialize a repository, git doesn't create any commits yet.
+Reasons:
+1) You may not want to save every file in the directory
+2) You may want to leave a meaninful message for the commit
+
+git status
+It shows the files that changed since last commit
+
+1) What happens when you initialize a repository? Why do you need to do it?
+
+It creates a .git directory and adds the necessary files to track the history
+of the repository.
+
+Choosing what changes to commit:
+
+- Working area
+The directory you are working on
+- Staging area
+What files do you want o commit.
+git add
+- Repository
+The tracked files
+
+2) How is the staging area different from the working directory and the
+   repository? What value do you think it offers?
+
+The staging area gives space to add/remove files you want to keep track of
+without having all in the working repository and giving time to check if
+there's all you want to commit.
+
+git commit
+or
+git commit -m "Your message"
+To save a snapshot of the files in the repository
