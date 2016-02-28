@@ -73,3 +73,22 @@ git checkout master
 You can add the files to change one logical step and then commit, and later add
 other files that might have changed to make another thing work in another
 commit.
+
+Branches
+
+Main branch -> master
+
+git branch
+Show the current branches
+
+git branch name
+Creates a new branch with the given name
+
+git checkout name
+Moves to the branch with the given name
+
+4) What are some situations when branches would be helpful in keeping your
+   history organized? How would branches help?
+
+When you're doing an experimental change it is good to keep a master branch and
+another branch to experiment and maybe merge later.
