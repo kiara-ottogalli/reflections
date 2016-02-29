@@ -92,3 +92,17 @@ Moves to the branch with the given name
 
 When you're doing an experimental change it is good to keep a master branch and
 another branch to experiment and maybe merge later.
+
+You may want to use branches when you collaborate with others
+
+git log --graph --oneline master coins
+At the end there are 2 branches I want to see
+
+Reachability
+
+git checkout -b new_branch_name
+
+5) How do the diagrams help you visualize the branch structure?
+
+It helps me get an idea of where is each commit and to what feature it belongs,
+it is, to what branch it belongs.
