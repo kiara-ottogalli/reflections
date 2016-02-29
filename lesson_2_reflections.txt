@@ -106,3 +106,27 @@ git checkout -b new_branch_name
 
 It helps me get an idea of where is each commit and to what feature it belongs,
 it is, to what branch it belongs.
+
+Merging Files
+
+git merge master coins
+Creates a merged version of the 2 branches
+You have to checkout one of the 2 branches you're going to merge first
+The order does not matter
+
+git merge --abort
+To get to the stable states before merging
+
+How do I know the parent of a commit to compare (diff) the changes?
+git show commit_id
+It shows the changes of a commit compared to its parent
+
+Since I don't need the branch coins, I delete it
+git branch -d coins
+This will only delete the label
+
+6) What is the result of merging two branches together? Why do we represent it
+   in the diagram the way we do?
+
+The result will be one commit to unite two branches. The previous commits will
+be there still.
