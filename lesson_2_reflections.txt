@@ -130,3 +130,20 @@ This will only delete the label
 
 The result will be one commit to unite two branches. The previous commits will
 be there still.
+
+Graphing tools
+
+- gliffy
+- yUML
+
+If there's a conflict in merging, git will insert the original common version
+and the 2 versions of the branches so you can compare what lines to keep and
+what lines to erase.
+
+Then do git add to the file 
+git commit to conclude the merge
+
+7) What are the pros and cons of Git’s automatic merging vs. always doing
+   merges manually?
+
+It saves a lot of time but can lead to mistakes.
