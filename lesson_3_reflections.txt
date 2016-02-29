@@ -1,0 +1,28 @@
+Syncing Repositories
+
+GitHub -> Remote Repositories (Remotes)
+
+In GitHub you have to make an empty repository first
+	Add -> New repository
+	reflections
+
+Add this repository as a remote to the reflections repository already on my
+computer.
+	git remote
+	To view a remote
+	git remote -v
+	To view the complete URL of the remote
+	git remote add name_to_refer_to_rep_on_GitHub url_of_remote
+	               'origin' is the standard name  https://github.com/kiara-ottogalli/reflections.git (on GitHub page)
+	To actually add the remote
+
+git push name_of_remote_rep name_of_local_branch
+To send my changes to the remote, takes two arguments: 1) The remote I want to
+send changes to and 2) The name of the local branch that i'd like to push.
+In this case it will be
+	git push origin master
+
+To save the credentials on my computer (windows):
+git config --global credential.helper wincred
+
+You can add changes in github, they will not be present in your local repository
