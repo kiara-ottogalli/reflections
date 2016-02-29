@@ -26,3 +26,9 @@ To save the credentials on my computer (windows):
 git config --global credential.helper wincred
 
 You can add changes in github, they will not be present in your local repository
+
+1) When would you want to use a remote repository rather than keeping all your
+   work local?
+
+The remote is useful to keep my work on the cloud and access it from any
+computer. Also it allows to work with other people from another location.
