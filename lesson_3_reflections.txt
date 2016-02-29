@@ -32,3 +32,41 @@ You can add changes in github, they will not be present in your local repository
 
 The remote is useful to keep my work on the cloud and access it from any
 computer. Also it allows to work with other people from another location.
+
+git pull origin master
+To sync the changes done directly in GitHub with the local repository.
+
+2) Why might you want to always pull changes manually rather than having Git
+   automatically stay up-to-date with your remote repository?
+
+I think that is is particulary useful when there are other people collaborating
+with yo on a project, you may want to check the changes first and have the
+choice of updating or not.
+
+Forking
+
+It is basically making a clone of some repository on GitHub, directly on GitHub
+servers. This allows people to make their own changes, suggest changes to the
+original owner of the repository and clone on the local machine you're working.
+
+It is done on the context of GitHub.
+
+Exercise
+- Fork this repo: https://github.com/LarryMad/recipes (use fork on GitHub)
+- Clone it on your pc: git clone https://github.com/LarryMad/recipes.git
+- Run git remote -v
+origin  https://github.com/kiara-ottogalli/recipes.git (fetch)
+origin  https://github.com/kiara-ottogalli/recipes.git (push)
+
+3) Describe the differences between forks, clones, and branches. When would you
+   use one instead of another?
+
+Clone: The idea is to copy a repository on your own computer, from GitHub or
+from another location on the same computer.
+Branch: The idea of a branch is primarily to experiment with the files in the
+repository without changing the files on the master branch. It creates another
+branch different to master.
+Fork: The idea is to copy a repository from another user of GitHub to your own
+account, on GitHub too, so you can clone it to your machine and make the
+changes you like, without changin the original repository.
+
