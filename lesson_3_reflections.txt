@@ -70,3 +70,93 @@ Fork: The idea is to copy a repository from another user of GitHub to your own
 account, on GitHub too, so you can clone it to your machine and make the
 changes you like, without changin the original repository.
 
+Conflicting Collaboration
+
+What happens if you have a new commit locally and one of your collaborators
+has made another commit and push to the GitHub repository, and the change makes
+a collision?
+
+Merging Remote Changes
+
+git saves what is the last commit in sync with the remote.
+This will be origin/master
+
+git fetch
+To update the local copy of the remote branch, leaving your new commits alone.
+
+Before
+
+Local
+         (origin/master)
+ev2 <--- f34 <--- a72
+                  (master)
+
+GitHub
+
+ev2 <--- f34 <--- 5b3
+                  (master)
+
+After
+
+Local
+         (origin/master)
+         5b3
+         |
+         v
+ev2 <--- f34 <--- a72
+                  (master)
+
+Out of sync!
+
+GitHub
+
+ev2 <--- f34 <--- 5b3
+                  (master)
+
+You can then use git merge to merge the 2 branches
+
+If you do
+git pull origin master
+
+Is the same as
+git fetch origin
+git merge master origin/master
+
+Fast-forward Merge
+
+o <--- a <--- b
+
+If you try to merge b into a
+
+o <--- o <--- b <--- a
+       A-------------|
+This will not make sense since b already has a's info.
+
+So the result is
+
+o <--- o <--- a
+
+An update of the label.
+
+If the branch you are merging into is an ancester of the branch that you are
+merging from, the result will be a fast-forward merge.
+
+4) What is the benefit of having a copy of the last known state of the remote
+   stored locally?
+
+The benefit is that you know where the two versions started to diverge.
+
+Collaborating on GitHub
+
+In the local rep, you can make a branch and do some changes
+Then you can push to remote
+Finally do a pull request, so that your collaborators see the changes you made
+When everyone is happy, merge into master branch
+
+5) How would you collaborate without using Git or GitHub? What would be easier,
+   and what would be harder?
+
+Without GitHub I like to collaborate by email, it keeps a history of what is
+done, and who update it last time.
+
+It would be hard to keep the new versions of the files though.
