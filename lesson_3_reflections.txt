@@ -160,3 +160,33 @@ Without GitHub I like to collaborate by email, it keeps a history of what is
 done, and who update it last time.
 
 It would be hard to keep the new versions of the files though.
+
+6) When would you want to make changes in a separate branch rather than
+   directly in master? What benefits does each approach have?
+
+I'd like to make changes in a different branch when doing something new that
+can lead the project to an unstable state. Then when I'm sure it works fine
+I'd push or do a pull request.
+
+If I'm entirely sure of what I want to do and I know beforehand it's going to
+work, I'd use the master branch.
+
+When you do a fork, and someone updates the remote from which you did that
+fork, you will need to pull the changes and resolve them in your computer.
+
+To do that you will have to add the pointer to the original remote so you can
+pull. The standard label will be upstream:
+
+git remote add upstream https://github.com/udacity/create-your-own-adventure.git
+
+git pull upstream master
+
+Then you have to merge the master with your 'change' branch.
+
+git checkout juanito-nieves
+
+git merge master juanito-nieves
+
+Finally push the changes to your fork.
+
+git push origin juanito-nieves
